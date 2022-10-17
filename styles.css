@@ -14,9 +14,16 @@
 }
 
 .screen {
-    background-color: green;
-    width: 100%;
+    box-sizing: border-box;
+    background-color: #66CC00;
     height: 40%;
+    margin: 5%;
+    text-align: end;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    font-size: large;
+    padding: 3%;
 }
 
 .button-grid {
