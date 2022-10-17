@@ -21,15 +21,25 @@ buttons[15].addEventListener('click', function(){current += this.textContent;scr
 //operations
 
 buttons[0].addEventListener('click', function(){screen.textContent = '';stored ='';current = '';});
-buttons[1].addEventListener('click', function(){});
-buttons[5].addEventListener('click', function(){});
-buttons[9].addEventListener('click', function(){});
+buttons[1].addEventListener('click', function(){    stored = calcScreen(stored, current);
+    operator = this.textContent;
+    current = '';
+    screen.textContent = `${stored}${operator}${current}`;});
+buttons[5].addEventListener('click', function(){    
+    stored = calcScreen(stored, current);
+    operator = this.textContent;
+    current = '';
+    screen.textContent = `${stored}${operator}${current}`;});
+buttons[9].addEventListener('click', function(){    stored = calcScreen(stored, current);
+    operator = this.textContent;
+    current = '';
+    screen.textContent = `${stored}${operator}${current}`;});
 
 
 buttons[13].addEventListener('click', function(){
-    stored = current;
-    current = '';
+    stored = calcScreen(stored, current);
     operator = this.textContent;
+    current = '';
     screen.textContent = `${stored}${operator}${current}`;
 });
 
@@ -59,7 +69,6 @@ buttons[17].addEventListener('click', function(){});
 
 //store current text cont into number var
 
-let a = 0;
 let current = '';
 let stored = '';
 let operator = '';
@@ -69,5 +78,9 @@ let operator = '';
 function calcScreen (a, b) {
     a = Number(a);
     b = Number(b);
-    if (operator === '+') {return a + b }
+    if (operator === '+') {return a + b}
+    else if(operator === '-') {return a - b}
+    else if(operator === 'x') {return a * b}
+    else if(operator === '÷') {return a / b}
+    else return b;
 }
