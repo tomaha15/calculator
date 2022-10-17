@@ -20,7 +20,7 @@ buttons[15].addEventListener('click', function(){current += this.textContent;scr
 
 //operations
 
-buttons[0].addEventListener('click', function(){screen.textContent = '';});
+buttons[0].addEventListener('click', function(){screen.textContent = '';stored ='';current = '';});
 buttons[1].addEventListener('click', function(){});
 buttons[5].addEventListener('click', function(){});
 buttons[9].addEventListener('click', function(){});
